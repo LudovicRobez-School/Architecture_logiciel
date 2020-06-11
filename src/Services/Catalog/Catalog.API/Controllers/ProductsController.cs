@@ -27,6 +27,11 @@ namespace Catalog.API.Controllers
             return base.DeleteItemAsync(id);
         }
 
+        public override Task<ActionResult<Product>> GetItemsAsync()
+        {
+            return base.GetItemsAsync();
+        }
+
         public override Task<ActionResult<Product>> GetItemByIdAsync([FromRoute] object id)
         {
             return base.GetItemByIdAsync(id);
